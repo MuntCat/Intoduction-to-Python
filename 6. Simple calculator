@@ -1,0 +1,9 @@
+# The objective is to create a simple program which takes two numbers and perfoms an addition.
+
+print("Calculator")
+x = input("Give the first number: ")
+y = input("Give the second number: ")
+
+sum = int(x) + int(y)
+
+print("The result is: ", sum)
