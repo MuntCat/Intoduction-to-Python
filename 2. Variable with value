@@ -1,0 +1,4 @@
+x = 50
+x = "This variable has a value which is string-type content. Awesome!"
+
+print(x)
