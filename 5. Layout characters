@@ -1,0 +1,6 @@
+# The objective is to understand how the layout-characters (\t and \n} and print works in general.
+
+print("This here is divided to several lines:\n\
+I am still in the same print-command.\n\
+\tName:\tPeter\n\
+\tJob:\tBabysitter")
