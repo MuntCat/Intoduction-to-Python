@@ -1,0 +1,8 @@
+''' Define a variable and assign it a string "desserts" as a value. 
+Then create three new variables, and assign them values by slicing the 
+A) first 4 characters B) the last 4 characters and C) the entire string backwards as given values. '''
+
+b = "desserts"
+print(" The first 4 characters were:" + b [0:4])
+print(" The last 4 characters were:" + b [4:8])
+print(" The string backwards was:" + b [::-1])
