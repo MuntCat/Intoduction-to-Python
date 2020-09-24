@@ -1,0 +1,10 @@
+floaty = 10.6411
+stringy = "Stringline!"
+
+floaty = int(floaty)
+stringy *= 2
+
+output = "Integer conversion cannot do roundings: " + str(floaty)
+output += "\nMultiplying strings also causes trouble: " + stringy
+
+print(output)
