@@ -1,0 +1,52 @@
+print("Calculator")
+promptForNumbers = True
+while True:
+
+    if promptForNumbers:
+      number_1 = int(input("Give the first number: "))
+      number_2 = int(input("Give the second number: "))
+      promptForNumbers = False
+
+    print("(1) +\n(2) -\n(3) *\n(4) /\n(5)Change numbers\n(6)Quit")
+    print ("Current numbers:",number_1, number_2)
+    number = int(input("Please select something (1-6): "))
+
+    # Function to add two numbers 
+    def add(num1, num2): 
+      return num1 + num2 
+
+    # Function to subtract two numbers 
+    def subtract(num1, num2): 
+      return num1 - num2 
+
+    # Function to multiply two numbers 
+    def multiply(num1, num2): 
+      return num1 * num2 
+
+    # Function to divide two numbers 
+    def divide(num1, num2): 
+      return num1 / num2  
+      
+    if number == 1: 
+	    print("The result is:", 
+			    add(number_1, number_2)) 
+
+    elif number == 2: 
+	    print("The result is: ", 
+					subtract(number_1, number_2)) 
+
+    elif number == 3: 
+	    print("The result is: ", 
+					multiply(number_1, number_2)) 
+
+    elif number == 4: 
+	    print("The result is: ", 
+					divide(number_1, number_2))
+    elif number == 6:
+      print("Thank you!") 
+      break   
+    
+    elif number == 5:
+      promptForNumbers = True
+    else: 
+      print("Selection was not correct.")
