@@ -1,0 +1,5 @@
+#The program ask for a number and save it in a variable. If the number is even, the program will print a text.
+
+number = int(input("Give a number: "))
+if number % 2 == 0:
+    print("The given number was even.")
