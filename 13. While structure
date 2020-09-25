@@ -1,0 +1,6 @@
+numLaps = 5
+currentLap = 0
+
+while currentLap < numLaps:
+    print("This is lap", currentLap)
+    currentLap += 1
