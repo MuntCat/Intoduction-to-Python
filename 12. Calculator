@@ -1,0 +1,48 @@
+# Improve the calculator so the user chooses the type of calculation
+
+print("Calculator")
+
+number_1 = int(input("Give the first number: "))
+number_2 = int(input("Give the second number: "))
+
+# Function to add two numbers 
+def add(num1, num2): 
+	return num1 + num2 
+
+# Function to subtract two numbers 
+def subtract(num1, num2): 
+	return num1 - num2 
+
+# Function to multiply two numbers 
+def multiply(num1, num2): 
+	return num1 * num2 
+
+# Function to divide two numbers 
+def divide(num1, num2): 
+	return num1 / num2  
+
+print("(1) + ");
+print("(2) - ");
+print("(3) * ");
+print("(4) / ");
+
+# Take input from the user 
+number = int(input("Please select something (1-4):"));
+
+if number == 1: 
+	print("The result is:", 
+					add(number_1, number_2)) 
+
+elif number == 2: 
+	print("The result is: ", 
+					subtract(number_1, number_2)) 
+
+elif number == 3: 
+	print("The result is: ", 
+					multiply(number_1, number_2)) 
+
+elif number == 4: 
+	print("The result is: ", 
+					divide(number_1, number_2)) 
+else: 
+	print("Selection was not correct.")
