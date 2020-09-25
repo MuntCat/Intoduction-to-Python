@@ -1,0 +1,8 @@
+with open("words.txt") as sourcefile:           # read each line into a list
+    content = sourcefile.readlines()
+
+content = [word.strip() for word in content]    # strip newline chars
+content.sort()                                  # sort to alphabetical order
+
+print("Words in an alphabetical order:")
+for i in content: print(i)
