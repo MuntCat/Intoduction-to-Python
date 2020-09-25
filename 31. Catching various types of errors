@@ -1,0 +1,16 @@
+try:
+    filename = input("Give the file name: ")
+    sourcefile = open(filename)
+    contents = sourcefile.read()
+    sourcefile.close()
+    integer = int(contents)
+    divided = 1000 / integer
+    print("The result was {}".format(divided))
+except IOError:
+    print("There seems to be no file with that name.")
+except ValueError:
+    print("The file contents were unsuitable.")
+except ZeroDivisionError:
+    print("You can't divide by zero.")
+except Exception:
+    print("There was an unknown error.")
