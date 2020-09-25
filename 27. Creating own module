@@ -1,5 +1,8 @@
+# -*- coding: cp1252 -*-
+
+import mymodule
+
+mymodule.printme("Exampleline")
 def printme(toPrint):
     print("I got: {}".format(toPrint))
     print("The parameter was {} characters long.".format(len(toPrint)))
-
-
