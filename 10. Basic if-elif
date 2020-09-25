@@ -1,0 +1,10 @@
+# A conditional structure which prints a line depending on the given selection. 
+
+number = int(input("Select a number (1-3): "))
+output = "You selected "
+
+if number == 1: output += "one."
+elif number == 2: output += "two."
+elif number == 3: output += "three."
+
+print(output)
