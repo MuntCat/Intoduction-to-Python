@@ -1,0 +1,15 @@
+import random
+
+def sub(computer):
+    if computer == 1:
+        computer = "Foot"        
+    elif computer == 2:
+        computer = "Nuke"
+    elif computer == 3:
+        computer = "Cockroach"
+    print("Computer chose: ",computer)
+    
+def main():
+    wins = 0
+    rounds = 0
+    draws = 0
