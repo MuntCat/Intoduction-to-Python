@@ -1,0 +1,5 @@
+def printme(toPrint):
+    print("I got: {}".format(toPrint))
+    print("The parameter was {} characters long.".format(len(toPrint)))
+
+
