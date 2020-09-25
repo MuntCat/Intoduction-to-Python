@@ -6,3 +6,4 @@ b = "desserts"
 print(" The first 4 characters were:" + b [0:4])
 print(" The last 4 characters were:" + b [4:8])
 print(" The string backwards was:" + b [::-1])
+
