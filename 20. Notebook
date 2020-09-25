@@ -1,0 +1,33 @@
+# A notebook where you can add, read or delete notes from a separate file.
+
+import os
+
+if os.path.isfile("notebook.txt"):
+    f = open("notebook.txt", "r+")
+    f.close()
+else:
+    f = open("notebook.txt", "w")
+    f.close()
+
+while True:
+    print("(1) Read the notebook \n(2) Add note \n(3) Empty the notebook \n(4) Quit")
+    selection = int(input("Please select one:"))
+    if selection == 1:
+        f = open("notebook.txt", "r+")
+        content = f.readlines()
+        for line in content:
+            print(line)
+        f.close()
+    elif selection == 2:
+        addtext = input("Write a new note:")
+        f = open("notebook.txt", "a")
+        f.writelines(addtext + "\n")
+        f.close()
+    elif selection == 3:
+        f = open("notebook.txt", "w")
+        with f as filename:
+            filename.write("")
+        print("Notes deleted.")
+    elif selection == 4: 
+          print("Notebook shutting down, thank you.")
+          break
