@@ -1,0 +1,8 @@
+# -*- coding: cp1252 -*-
+
+mylist = ("Blue", "Red", "Yellow", "Green")
+slice = mylist[0]
+print("The first item in the list is:",slice)
+print("The entire list printed one item a time:")
+for i in mylist:
+  print(i)
