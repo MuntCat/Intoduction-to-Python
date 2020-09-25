@@ -1,0 +1,17 @@
+def tester(givenstring):
+    result=len(givenstring)
+    if result>10:
+        print(givenstring)
+    else:
+        print("Too short")
+
+def main():
+    while True:
+        wrote=input("Write something (quit ends): ")
+        if wrote=="quit":
+            break
+        else:
+            tester(wrote)
+
+if __name__ == "__main__":
+    main()
