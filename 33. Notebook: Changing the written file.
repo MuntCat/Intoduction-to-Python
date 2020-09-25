@@ -1,0 +1,73 @@
+import time
+
+DEFAULT_FILENAME = "notebook.txt"
+
+def main():
+    init()
+
+def init():
+    filename = DEFAULT_FILENAME
+    setNotebook(filename)
+
+    while True:
+        displayOptions(filename)
+        selection = getInt()
+
+        if selection == 1:
+            read(filename)
+        elif selection == 2:
+            addNote(filename)
+        elif selection == 3:
+            empty(filename)
+        elif selection == 4:
+            filename = input("Give the name of the new file: ")
+            setNotebook(filename)
+        elif selection == 5:
+            print("Notebook shutting down, thank you.")
+            quit()
+
+def displayOptions(filename):
+    print( 
+    """
+Now using file {}
+(1) Read the notebook
+(2) Add note
+(3) Empty the notebook
+(4) Change the notebook
+(5) Quit\n""".format(filename))
+
+def setNotebook(filename):
+    try:
+        open(filename)
+    except Exception:
+        open(filename, "w")
+        if filename == DEFAULT_FILENAME:
+            print("\nNo default notebook was found, created one.")
+        else:
+            print("\nNo notebook with that name detected, created one.")
+
+def getInt():
+    while True:
+        try:
+            return int(input("Please select one: "))
+        except Exception:
+            print("Input must be an integer.")
+
+def read(filename):
+    sourcefile = open(filename)
+    print("\n" + sourcefile.read()[:-1])     # :-2 to strip the last newline characters
+    sourcefile.close()
+
+def addNote(filename):
+    destFile = open(filename, "a")
+    newNote = input("\nWrite a new note: ")
+    destFile.write("{} ::: {}\n".format(newNote, time.strftime("%X %x")))
+    destFile.close()
+
+def empty(notebook):
+    destFile = open(notebook, "w")
+    destFile.close()
+    print("\nNotes deleted.\n")
+
+if __name__ == "__main__":
+    main()
