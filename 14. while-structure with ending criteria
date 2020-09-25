@@ -1,0 +1,8 @@
+while True:
+    userwrote = input("Write something: ")
+    if userwrote  == "quit":
+        print("Bye Bye!")
+        break
+    else:
+        print(userwrote)
+        
