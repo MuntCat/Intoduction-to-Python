@@ -1,0 +1,11 @@
+# Print the text indicating whether the line was alphanumeric or not
+
+filename = "strings.txt"
+handle = open("strings.txt","r") #read file
+text = handle.readlines() # read lines by lines
+for i in text:
+    if i.rstrip().isalnum():
+        print(i.rstrip()," was ok.")
+    else:
+        print(i.rstrip()," was invalid.")
+handle.close()
