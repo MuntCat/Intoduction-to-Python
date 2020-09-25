@@ -1,0 +1,18 @@
+# -*- coding: cp1252 -*-
+
+import random
+numbers = []
+
+while True:
+  if len(numbers) == 7:
+    break
+  pick = random.randint(1,39)
+  if pick not in numbers:
+    numbers.append(pick)
+
+numbers.sort()
+print("The program picked the following numbers:")
+
+for i in numbers:
+  print(i, end= ' ')
+  
