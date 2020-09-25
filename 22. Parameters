@@ -1,0 +1,16 @@
+# -*- coding: cp1252 -*-
+
+def poweroftwo(value):
+    value = 2**((value))
+
+    value = int(value)
+    return value
+
+def main():
+    value = float(input("Give a number: "))
+
+    total_sum = poweroftwo(value)
+    print("The result is",total_sum)
+
+if __name__ == "__main__":
+    main()
