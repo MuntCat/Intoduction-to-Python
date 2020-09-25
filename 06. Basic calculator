@@ -7,3 +7,4 @@ y = input("Give the second number: ")
 sum = int(x) + int(y)
 
 print("The result is: ", sum)
+
