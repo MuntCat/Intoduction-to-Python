@@ -1,0 +1,12 @@
+myfile = open("log.txt","w")
+file_2 = open("test.txt", "w")
+while True:
+  file = input("Give a file name: ")
+  userwrote = input("Write something: ")
+  print("Wrote", userwrote, "to the file", file)
+  break
+
+myfile.write(userwrote)
+file_2.write(userwrote)
+myfile.close()
+file_2.close()
